@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula de Bhaskara</title>
+    <h1>Resolvendo Bhaskara</h1>
+</head>
+<body>
+    <button id="calcula" onclick = "calc()">Calcular</button>
+    <script>
+        function calc(){
+            var a = Number(window.prompt("Digite o valor de a:"))
+            var b = Number(window.prompt("Digite o valor de b:"))
+            var c = Number(window.prompt("Digite o valor de c:"))
+            var form = Number(window.alert("A equação é "+ a + "x² + "+ b + "x + " + c +" = 0"))
+            var delta = Number(window.alert("O valor de Δ = " + (b**2 - 4*a*c)))
+        }
+    </script>
+</body>
+</html>
