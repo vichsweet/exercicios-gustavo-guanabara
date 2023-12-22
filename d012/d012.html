@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço mudou</title>
+    <h1>Preço mudou</h1>
+</head>
+<body>
+    <button id="preco" onclick = "preMudou()">Conferir</button>
+    <section id = 'resultado'></section>
+    <script>
+        function preMudou(){
+            var prod = window.prompt("Qual o produto que você quer conferir o preço?")
+            var preAnt = window.prompt("Qual o preço anterior de "+ prod + "?")
+            var preAtual = window.prompt("Qual o preço atual de " + prod + "?")
+            var resposta = window.document.getElementById('resultado');
+            resposta.innerHTML = prod + " custava R$:" + preAnt + ", e agora custa R$:" + preAtual;
+            var preMais = Number(preAnt - preAtual)
+            var preMenos = Number(preAtual - preAnt)
+            if (preAnt > preAtual){
+                var mudaMais = window.document.getElementById('resultado');
+                mudaMais.innerHTML = prod + "está mais barato. O preço baixou R$:" + preMais + ". Com uma variação de " + ((preMais*100)/preAnt) + "% para baixo.";
+            }
+            else if (preAnt == preAtual) {
+                var igual = window.document.getElementById('resultado');
+                igual.innerHTML = prod + " não teve alterações";
+            }
+            else {
+                var senao = window.document.getElementById('resultado');
+                senao.innerHTML = prod + " está mais caro. O preço aumentou R$:" + (preMenos) + " . Com uma variação de " + ((preMenos*100)/preAnt) + "% para cima.";
+            }
+        }
+    </script>
+</body>
+</html>
