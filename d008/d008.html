@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Desconto</title>
+    <h1>Calculo de Desconto</h1>
+</head>
+<body>
+    <button id="botao1"onclick= 'desc()'>Desconto de 10%</button>
+    <script>
+        function desc(){
+            var dez= Number(window.prompt('Digite o valor da sua compra para calcular seus 10% de desconto: '))
+            var desDez= Number(window.alert('O valor com desconto é R$: '+ (dez - (dez*0.1)))) 
+        }
+    </script>
+</body>
+</html>
