@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajustar salário</title>
+    <h1>Reajuste salarial</h1>
+</head>
+<body>
+    <button id="botao1"onclick="Reaj()">Reajustar Salário</button>
+    <script>
+        function Reaj(){
+            var nome = window.prompt("Qual o nome do funcionário?")
+            var sal = Number(window.prompt("Qual é o salário de " + nome + "?"))
+            var reajuste = Number(window.prompt("O salário de "+ nome + " vai ser reajustado em qual porcentagem?"))
+            var salFinal = Number(window.alert( 'O salário de ' + nome + ' é R$:'+ sal +'. Com  o aumento de '+ reajuste + '%, o salário vai aumentar R$:' + sal*reajuste/100 + ' no próximo mês. E a partir daí, '+ nome + ' vai passar a ganhar R$:' + ((sal*reajuste/100)+sal)))
+        }
+    </script>
+</body>
+</html>
